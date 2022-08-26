@@ -21,6 +21,8 @@ import { WalletDialogProvider } from "@solana/wallet-adapter-material-ui";
 
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
+import { CrossmintPayButton } from '@crossmint/client-sdk-react-ui';
+
 const theme = createTheme({
   palette: {
     type: "dark",
@@ -69,20 +71,43 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets} autoConnect>
-          <WalletDialogProvider>
-            <Home
-              candyMachineId={candyMachineId}
-              connection={connection}
-              txTimeout={DEFAULT_TIMEOUT}
-              rpcHost={rpcHost}
-              network={network}
-              error={error}
-            />
-          </WalletDialogProvider>
-        </WalletProvider>
-      </ConnectionProvider>
+      <div className='mint-title'>D3G3N TR!PS</div>
+      <div className='mint-subtitle'>Everbody wins.</div>
+      <div className='wallet-container'>
+        <ConnectionProvider endpoint={endpoint}>
+          <WalletProvider wallets={wallets} autoConnect>
+            <WalletDialogProvider>
+              <Home
+                candyMachineId={candyMachineId}
+                connection={connection}
+                txTimeout={DEFAULT_TIMEOUT}
+                rpcHost={rpcHost}
+                network={network}
+                error={error}
+              />
+            </WalletDialogProvider>
+          </WalletProvider>
+        </ConnectionProvider>
+        <div className='crossmint-container'>
+          <CrossmintPayButton
+            collectionTitle='D3G3N P!CKS by JetGetter Club'
+            collectionDescription='JetGetter Club is a brand utilizing web3 to make travel accessible. Your jet is access to exclusive pricing, rewards, and a community sharing the best spots around the world.'
+            collectionPhoto='https://pbs.twimg.com/profile_images/1492014207125975040/UTA0SVNO_400x400.jpg'
+            clientId='c4a594ad-58a7-4bfa-b99f-35adc630a4ee'
+            mintConfig={{"type":"candy-machine"}}
+            paymentMethod="ETH"
+            className="my-crossmint"
+          />
+          <CrossmintPayButton
+            collectionTitle='D3G3N P!CKS by JetGetter Club'
+            collectionDescription='JetGetter Club is a brand utilizing web3 to make travel accessible. Your jet is access to exclusive pricing, rewards, and a community sharing the best spots around the world.'
+            collectionPhoto='https://pbs.twimg.com/profile_images/1492014207125975040/UTA0SVNO_400x400.jpg'
+            clientId='c4a594ad-58a7-4bfa-b99f-35adc630a4ee'
+            mintConfig={{"type":"candy-machine"}}
+            className="my-crossmint"
+          />
+        </div>
+      </div>
     </ThemeProvider>
   );
 };

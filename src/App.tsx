@@ -104,6 +104,7 @@ const App = () => {
             collectionPhoto='https://pbs.twimg.com/profile_images/1492014207125975040/UTA0SVNO_400x400.jpg'
             clientId='c4a594ad-58a7-4bfa-b99f-35adc630a4ee'
             mintConfig={{"type":"candy-machine"}}
+            paymentMethod="fiat"
             className="my-crossmint"
           />
         </div>

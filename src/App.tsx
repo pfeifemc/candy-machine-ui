@@ -93,7 +93,7 @@ const App = () => {
             collectionTitle='D3G3N P!CKS by JetGetter Club'
             collectionDescription='JetGetter Club is a brand utilizing web3 to make travel accessible. Your jet is access to exclusive pricing, rewards, and a community sharing the best spots around the world.'
             collectionPhoto='https://pbs.twimg.com/profile_images/1492014207125975040/UTA0SVNO_400x400.jpg'
-            clientId='c4a594ad-58a7-4bfa-b99f-35adc630a4ee'
+            clientId='bcb0bf9f-adc2-48be-91d8-06be5b2583da'
             mintConfig={{"type":"candy-machine"}}
             paymentMethod="ETH"
             className="my-crossmint"
@@ -102,7 +102,7 @@ const App = () => {
             collectionTitle='D3G3N P!CKS by JetGetter Club'
             collectionDescription='JetGetter Club is a brand utilizing web3 to make travel accessible. Your jet is access to exclusive pricing, rewards, and a community sharing the best spots around the world.'
             collectionPhoto='https://pbs.twimg.com/profile_images/1492014207125975040/UTA0SVNO_400x400.jpg'
-            clientId='c4a594ad-58a7-4bfa-b99f-35adc630a4ee'
+            clientId='bcb0bf9f-adc2-48be-91d8-06be5b2583da'
             mintConfig={{"type":"candy-machine"}}
             paymentMethod="fiat"
             className="my-crossmint"

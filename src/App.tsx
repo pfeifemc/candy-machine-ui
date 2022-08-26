@@ -70,6 +70,7 @@ const App = () => {
   );
 
   return (
+    <div style={{height:"100vh"}}>
     <ThemeProvider theme={theme}>
       <div className='mint-title'>D3G3N TR!PS</div>
       <div className='mint-subtitle'>Everbody wins.</div>
@@ -110,6 +111,7 @@ const App = () => {
         </div>
       </div>
     </ThemeProvider>
+    </div>
   );
 };
 

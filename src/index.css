@@ -8,16 +8,20 @@
   src: url("./fonts/OpenSans.ttf");
 }
 
+@font-face {
+  font-family: merriweather;
+  src: url("./fonts/Merriweather-Regular.ttf");
+}
+
 * {
   font-family: opensans, monospace;
 }
 
 .mint-title {
   text-align: center;
-  color: white;
-  text-shadow: 5px 3px black;
-  font-family: yellowtail;
-  font-size: 150px;
+  color: black;
+  font-family: merriweather;
+  font-size: 120px;
   padding-top: 40px;
   padding-left: 20px;
   padding-right: 20px;
@@ -25,21 +29,23 @@
 
 .mint-subtitle {
   text-align: center;
-  color: white;
-  text-shadow: 5px 3px black;
+  color: black;
   font-family: yellowtail;
   font-size: 40px;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: -60px;
 }
 
 body {
-  background: #7e02e6;
-  background-image: url("./assets/JetGetter_Mint_Day.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
+  position: relative;
+  background: white;
+  background-image: url("./assets/degen_trips_bg.png");
+  background-repeat: none;
   background-position: top;
+  background-size: cover;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -87,19 +93,36 @@ button.my-crossmint {
   justify-content: center;
 }
 
+.candy-machine-container {
+  position: relative;
+  height: 100vh;
+}
+
+.candy-machine {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
-  .footer {
-    position: static;
-  }
 
   .mint-title {
-    font-size: 50px;
+    font-size: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  body {
+  .mint-subtitle {
+    margin-bottom: -80px;
+  }
+
+  button.my-crossmint {
+    font-size: 10px;
+  }
+
+  /* body {
     background-image: url("./assets/JetGetter_Mint_Day.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,6 +130,5 @@ button.my-crossmint {
     margin: 0;
     padding: 0;
     height: 100%;
-
-  }
+  } */
 }
